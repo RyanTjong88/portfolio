@@ -1,0 +1,36 @@
+header {
+  min-height: 670px;
+  height: 85vh;
+  margin-top: 15px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  // border-bottom: 3rem solid black;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.05);
+  border-color: #000000;
+  border-width: 0px;
+  &__item {
+    display: flex;
+  }
+
+  &__icon {
+    font-size: 3rem;
+    margin-left: 3rem;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        margin: 0 0 0 5rem;
+        a {
+          font: 500 1.5rem $primaryFont;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

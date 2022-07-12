@@ -1,0 +1,117 @@
+//VARIABLE DECLARATIONS
+
+//COLORS
+$secondaryBackgroundColor: #a3d1ff;
+$heading: #6cb5ff;
+$accentColor: #4141fa;
+$fontColor: #111;
+$buttonColor: #0000e0;
+$buttonHoverColor: #1e90ff;
+$footerColor: #6cb5ff;
+
+//FONTS
+$primaryFont: "Raleway", sans-serif;
+
+//STRIPPING STYLES
+html,
+body,
+section,
+h1,
+h2,
+h3,
+h4,
+a,
+p,
+ul,
+li,
+form,
+select,
+button {
+  padding: 0;
+  margin: 0;
+  color: $fontColor;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+select {
+  border: none;
+  background: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+//GLOBAL STYLES
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+// h1 {
+//   color: #0000e0;
+// }
+// .wrapperTwo {
+//     width: 90%;
+//     max-width: 900px;
+//     margin: 0 auto;
+// }
+
+// .border {
+//     border: 2px solid #000;
+//     border-top: none;
+//     border-bottom: none;
+//     height: 100%;
+// }
+
+// h3 {
+//     font: 100 7rem $primaryFont;
+//     position: relative;
+//     z-index: 10;
+
+//     transition: .3s ease-in-out all;
+
+//     &::before {
+//         content: '';
+//         background-color: $heading;
+//         opacity: .3;
+//         width: 100%;
+//         max-height: 29px;
+//         height: 25%;
+//         position: absolute;
+//         bottom: 9%;
+//         left: 4%;
+//         z-index: -10;
+//     }
+
+//     &:hover,
+//     &:focus {
+//         cursor: crosshair;
+//     }
+// }
+
+// button {
+//     background-color: $secondaryBackgroundColor;
+//     width: 150px;
+//     padding: 10px 20px;
+//     transition: .3s ease-in-out all;
+// }
+
+// .paired {
+//     font-weight: 700;
+// }
