@@ -4,7 +4,8 @@
 $secondaryBackgroundColor: #a3d1ff;
 $heading: #6cb5ff;
 $accentColor: #4141fa;
-$fontColor: #111;
+$primary-font-color: #111;
+$secondary-font-color: #bbb086;
 $buttonColor: #0000e0;
 $buttonHoverColor: #1e90ff;
 $footerColor: #6cb5ff;
@@ -29,7 +30,7 @@ select,
 button {
   padding: 0;
   margin: 0;
-  color: $fontColor;
+  color: $primary-font-color;
 }
 
 ul {
