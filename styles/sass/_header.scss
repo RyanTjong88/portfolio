@@ -1,6 +1,6 @@
 .header {
   min-height: 670px;
-  height: 85vh;
+  height: 100vh;
   margin-top: 15px;
   overflow: hidden;
 
@@ -9,7 +9,7 @@
     height: 100%;
 
     &__container-one {
-      width: 40%;
+      width: 30%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -19,11 +19,30 @@
       div {
         position: absolute;
         right: -60px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        @keyframes fadeInAnimation {
+          0% {
+            opacity: 0;
+          }
+          10% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
         h1 {
-          text-align: right;
+          animation: fadeInAnimation ease 7s;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
           text-transform: uppercase;
           color: $secondary-font-color;
           font: 600 4rem $primaryFont;
+          letter-spacing: 1px;
 
           span {
             color: $primary-font-color;
@@ -31,17 +50,72 @@
         }
 
         p {
-          text-align: right;
+          animation: fadeInAnimation ease 7s;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
           color: $text-font-color;
           font: 400 2.1rem $primaryFont;
           line-height: 3.2rem;
+          letter-spacing: 1px;
+        }
+        // SLIDES BUTTON IN
+        @keyframes slidein {
+          0% {
+            margin-right: 70%;
+            opacity: 0;
+          }
+
+          40% {
+            margin-right: 70%;
+            opacity: 0;
+          }
+
+          100% {
+            margin-right: 0%;
+            opacity: 1;
+          }
+        }
+        button {
+          animation-duration: 4s;
+          animation-name: slidein;
+          background-color: $primary-font-color;
+          padding: 1.5rem 6rem;
+          margin-top: 5rem;
+          font: 400 1.2rem $primaryFont;
+          text-transform: uppercase;
+          letter-spacing: 4px;
+          color: #fff;
+          cursor: pointer;
+          transition: background-color 0.5s ease;
+
+          &:hover,
+          &:focus {
+            background-color: $secondary-font-color;
+          }
         }
       }
     }
 
     &__container-two {
-      width: 60%;
-      background-color: gray;
+      width: 70%;
+      margin-top: 5rem;
+      overflow: hidden;
+
+      // ZOOMS HEADER IMAGE IN AND OUT
+      @keyframes zoominandout {
+        0% {
+          transform: scale(1);
+        }
+
+        100% {
+          transform: scale(1.2);
+        }
+      }
+      img {
+        animation: zoominandout 20s infinite;
+        z-index: -10;
+        position: relative;
+      }
     }
   }
 }
@@ -53,6 +127,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 1rem;
   }
 
   &__item {
@@ -102,7 +177,7 @@
           color: $primary-font-color;
           text-transform: uppercase;
           padding: 1rem;
-
+          letter-spacing: 1px;
           transition: all 0.5s ease;
 
           &:hover,

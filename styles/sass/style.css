@@ -320,7 +320,7 @@ html {
 
 .header {
   min-height: 670px;
-  height: 85vh;
+  height: 100vh;
   margin-top: 15px;
   overflow: hidden;
 }
@@ -333,7 +333,7 @@ html {
 }
 
 .header__section__container-one {
-  width: 40%;
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -353,13 +353,53 @@ html {
 .header__section__container-one div {
   position: absolute;
   right: -60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .header__section__container-one div h1 {
-  text-align: right;
+  -webkit-animation: fadeInAnimation ease 7s;
+          animation: fadeInAnimation ease 7s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   text-transform: uppercase;
   color: #bbb086;
   font: 600 4rem "Raleway", sans-serif;
+  letter-spacing: 1px;
 }
 
 .header__section__container-one div h1 span {
@@ -367,15 +407,102 @@ html {
 }
 
 .header__section__container-one div p {
-  text-align: right;
+  -webkit-animation: fadeInAnimation ease 7s;
+          animation: fadeInAnimation ease 7s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   color: #515151;
   font: 400 2.1rem "Raleway", sans-serif;
   line-height: 3.2rem;
+  letter-spacing: 1px;
+}
+
+@-webkit-keyframes slidein {
+  0% {
+    margin-right: 70%;
+    opacity: 0;
+  }
+  40% {
+    margin-right: 70%;
+    opacity: 0;
+  }
+  100% {
+    margin-right: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    margin-right: 70%;
+    opacity: 0;
+  }
+  40% {
+    margin-right: 70%;
+    opacity: 0;
+  }
+  100% {
+    margin-right: 0%;
+    opacity: 1;
+  }
+}
+
+.header__section__container-one div button {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  background-color: #111;
+  padding: 1.5rem 6rem;
+  margin-top: 5rem;
+  font: 400 1.2rem "Raleway", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+.header__section__container-one div button:hover, .header__section__container-one div button:focus {
+  background-color: #bbb086;
 }
 
 .header__section__container-two {
-  width: 60%;
-  background-color: gray;
+  width: 70%;
+  margin-top: 5rem;
+  overflow: hidden;
+}
+
+@-webkit-keyframes zoominandout {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes zoominandout {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+.header__section__container-two img {
+  -webkit-animation: zoominandout 20s infinite;
+          animation: zoominandout 20s infinite;
+  z-index: -10;
+  position: relative;
 }
 
 .nav {
@@ -393,6 +520,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 1rem;
 }
 
 .nav__item {
@@ -454,6 +582,7 @@ html {
   color: #111;
   text-transform: uppercase;
   padding: 1rem;
+  letter-spacing: 1px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
